@@ -18,10 +18,7 @@ def summon_captain_planet(arg)
 end
 
 def long_planeteer_calls(arg)
-  arg.each do |word|
-    return false if word.length <= 4
-    return true if word.length > 4
-  end
+  arg.detect{|call| call.length > 4}
 end
 
 def find_the_cheese(arg)
