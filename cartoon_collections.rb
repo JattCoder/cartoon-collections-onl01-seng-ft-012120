@@ -28,13 +28,18 @@ def find_the_cheese(arg)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
   count = 0
+  check = false
   arg.each do |cheese|
     while count < cheese_types.length
       if cheese == cheese_types[count]
         return cheese
+        check  = true
       end
       count += 1
     end
     count = 0
+  end
+  if check == false
+    return nil
   end
 end
