@@ -35,5 +35,6 @@ def find_the_cheese(arg)
       end
       count += 1
     end
+    count = 0
   end
 end
