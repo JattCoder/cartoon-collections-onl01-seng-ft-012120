@@ -19,9 +19,21 @@ end
 
 def long_planeteer_calls(arg)
   count = 0
+  all = false
+  any = false
   while count < arg.length
-    yield(arg[count])
+    if arg[count].length > 4
+      #string chars are over 4
+      any = true
+      all = true
+    end
     count += 1
+  end
+  if any == true
+    return true
+  end
+  if all == false
+    return false
   end
 end
 
