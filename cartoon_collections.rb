@@ -18,8 +18,10 @@ def summon_captain_planet(arg)
 end
 
 def long_planeteer_calls(arg)
-  arg.each do |word|
-    yield(word)
+  count = 0
+  while count < arg.length
+    yield(arg[count])
+    count += 1
   end
 end
 
